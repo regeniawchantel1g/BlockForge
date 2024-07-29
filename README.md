@@ -1,115 +1,93 @@
-# Swisstronik Tesnet Techinal Task 1
+# BlockForge
 
-link : [Click!](https://www.swisstronik.com/testnet2/dashboard)
+## Deskripsi
 
-Feel free donate to my EVM address
+BlockForge adalah platform revolusioner untuk pembuatan dan pengelolaan kontrak pintar (smart contracts) di blockchain. Dengan antarmuka yang intuitif dan alat-alat canggih, BlockForge memudahkan pengembang dari berbagai latar belakang untuk menciptakan, menguji, dan menerapkan kontrak pintar dengan efisiensi tinggi.
 
-EVM :
+## Fitur Utama
 
-```bash
-0x9902C3A98Df4b240ad5496cC26F89bAb8058f4aE
-```
+- **Pembuatan Kontrak Pintar**: Mudah membuat kontrak pintar dengan template dan panduan langkah demi langkah.
+- **Pengujian Otomatis**: Uji kontrak pintar Anda secara otomatis dengan framework pengujian bawaan.
+- **Penerapan Cepat**: Deploy kontrak pintar ke berbagai jaringan blockchain dengan sekali klik.
+- **Analisis Keamanan**: Alat analisis keamanan untuk memastikan kontrak pintar Anda bebas dari kerentanan.
 
-## Steps
+## Instalasi
 
-### 1. Clone Repository
+Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan BlockForge secara lokal.
 
-```bash
-git clone https://github.com/Mnuralim/hardhat-deploy-contract.git
-```
+### Prasyarat
 
-```
-cd hardhat-deploy-contract
-```
+- Node.js versi 14.x atau lebih baru
+- NPM (Node Package Manager) atau Yarn
+- Git
 
-### 2. Install Dependency
+### Langkah Instalasi
 
-```bash
-npm install
-```
+1. Clone repository ini:
+    ```bash
+    git clone https://github.com/regeniawchantel1g/BlockForge.git
+    cd BlockForge
+    ```
 
-### 3. Set .env File
+2. Instal dependensi:
+    ```bash
+    npm install
+    # atau
+    yarn install
+    ```
 
-create .env file in root project
+3. Jalankan aplikasi:
+    ```bash
+    npm start
+    # atau
+    yarn start
+    ```
 
-```bash
-PRIVATE_KEY="your private key"
-```
+Aplikasi akan berjalan di `http://localhost:3000`.
 
-### 4. Create Smart Contract
+## Penggunaan
 
-- Open contract folder
-- Create Hello_swtr.sol file
-- Copy this code and paste there
+### Membuat Kontrak Pintar
 
-```
-/// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.19;
+1. Klik tombol **"Buat Kontrak"** di halaman utama.
+2. Pilih template kontrak yang sesuai atau mulai dari awal.
+3. Ikuti panduan langkah demi langkah untuk mengonfigurasi kontrak Anda.
+4. Uji kontrak Anda dengan alat pengujian yang tersedia.
+5. Deploy kontrak Anda ke jaringan blockchain pilihan Anda.
 
-//This contract is only intended for testing purposes
+### Mengelola Kontrak
 
-contract Swisstronik {
-    string private message;
+1. Buka **"Daftar Kontrak"** untuk melihat semua kontrak yang telah Anda buat.
+2. Klik kontrak untuk melihat detail, mengedit, atau menghapus kontrak tersebut.
+3. Gunakan alat analisis untuk memeriksa keamanan dan kinerja kontrak.
 
-    /**
-     * @dev Constructor is used to set the initial message for the contract
-     * @param _message the message to associate with the message variable.
-     */
-    constructor(string memory _message) payable{
-        message = _message;
-    }
+## Kontribusi
 
-    /**
-     * @dev setMessage() updates the stored message in the contract
-     * @param _message the new message to replace the existing one
-     */
-    function setMessage(string memory _message) public {
-        message = _message;
-    }
+Kami sangat mengapresiasi kontribusi dari komunitas. Untuk berkontribusi, ikuti langkah-langkah berikut:
 
-    /**
-     * @dev getMessage() retrieves the currently stored message in the contract
-     * @return The message associated with the contract
-     */
-    function getMessage() public view returns(string memory){
-        return message;
-    }
-}
-```
+1. Fork repository ini.
+2. Buat branch baru untuk fitur atau perbaikan Anda:
+    ```bash
+    git checkout -b fitur-atau-perbaikan-baru
+    ```
+3. Lakukan perubahan dan commit:
+    ```bash
+    git commit -m "Menambahkan fitur ABC" -a
+    ```
+4. Push ke branch di repository forked:
+    ```bash
+    git push origin fitur-atau-perbaikan-baru
+    ```
+5. Buat Pull Request ke repository ini.
 
-### 5. Compile Smart Contract
+## Lisensi
 
-```bash
-npm run compile
-```
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
-### 6. Deploy Smart Contract
+## Kontak
 
-```bash
-npm run deploy
-```
+Untuk informasi lebih lanjut atau pertanyaan, silakan hubungi kami di [email@example.com](mailto:email@example.com).
 
-### 7. Get Message
+---
 
-```bash
-npm run get-message
-```
-
-### 8. Get Message
-
-```bash
-npm run set-message
-```
-
-### 9. Finsihed
-
-- Open the deployed-adddress.ts (location in utils folder)
-- Copy the address and paste the address in testnet dashboard
-- push this project to your github and paste your repository link in testnet dashboard
-
-by :
-github : [Mnuralim](https://github.com/Mnuralim)
-twitter : @Izzycracker04
-telegram : @fitriay19
-
-//0xf1f0C7Bf19ee4E196C0213cEE1002e9a5fadff62//
+Terima kasih telah menggunakan BlockForge! Kami berharap platform ini dapat membantu Anda dalam membuat dan mengelola kontrak pintar dengan lebih mudah dan aman.
